@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carta - 07/07</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4a261;
+      background-image: radial-gradient(circle at center, #e76f51 15%, transparent 16%), 
+                        repeating-radial-gradient(circle at center, transparent 0 14%, #ffffff22 15% 30%);
+      color: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header {
+      margin-bottom: 30px;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+    .ball {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at 20% 20%, #ff7043, #d84315);
+      border-radius: 50%;
+      border: 4px solid #b33a14;
+      position: absolute;
+      right: 0;
+      top: -10px;
+      box-shadow: 0 0 15px #d84315aa;
+      animation: bounce 2s infinite ease-in-out;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 1px 1px 6px #b33a14;
+      margin: 0;
+      padding-right: 80px;
+    }
+    .letter-box {
+      background: #fff3e0;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      padding: 30px;
+      max-width: 600px;
+      color: #4a4a4a;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+    .back-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #e76f51;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(231, 111, 81, 0.7);
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .back-button:hover {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Carta - 07/07</h1>
+    <div class="ball"></div>
+  </header>
+
+  <main>
+    <section class="letter-box">
+      <p>Querido Julio,</p>
+      <p>Nesta última carta, quero te agradecer por ser essa pessoa tão especial na minha vida.</p>
+      <p>Que possamos...</p>
+      <p>Te desejo toda a felicidade do mundo, hoje e sempre.</p>
+      <p>Com amor,</p>
+      <p>Júlia</p>
+    </section>
+
+    <a href="carta.html" class="back-button">Voltar para o presente</a>
+  </main>
+</body>
+</html>

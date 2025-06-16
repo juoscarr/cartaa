@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Júlio</title>
+  <style>
+    @keyframes glitter {
+      0% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.5; transform: scale(1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glitter {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: glitter 2s infinite ease-in-out;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .glitter:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+    .glitter:nth-child(2) { top: 40%; left: 80%; animation-delay: 0.5s; }
+    .glitter:nth-child(3) { top: 70%; left: 30%; animation-delay: 1s; }
+    .glitter:nth-child(4) { top: 60%; left: 60%; animation-delay: 1.5s; }
+    .glitter:nth-child(5) { top: 30%; left: 45%; animation-delay: 2s; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      padding: 30px;
+      background: #fff8f0;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(255, 160, 122, 0.4);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .reveal-button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 10px;
+    }
+
+    .reveal-button:hover {
+      background-color: #ff3b2e;
+    }
+
+    .heart {
+      color: #ff3b3f;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+  <script>
+    function revelarMensagem() {
+      document.getElementById('mensagem').classList.remove('hidden');
+      document.getElementById('botao').classList.add('hidden');
+    }
+  </script>
+</head>
+<body>
+  <div class="glitter"></div>
+  <div class="glitter"></div>
+  <div class="glitter"></div>
+  <div class="glitter"></div>
+  <div class="glitter"></div>
+
+  <div class="content">
+    <div class="heart">❤️❤️❤️</div>
+    <button id="botao" class="reveal-button" onclick="revelarMensagem()">Clique aqui 💌</button>
+
+    <div id="mensagem" class="hidden">
+      <p>Feliz aniversário, Júlio. Esse presente é só uma forma delicada de te mostrar o quanto você é importante pra mim. Ao longo de três datas, escrevi com carinho o que mudou em mim e o que permanece: o carinho que sinto por você.</p>
+      <p>Tenho que usar meu curso pra alguma coisa né, então fiz um site</p>
+      <p>Escolha abaixo qual momento você quer ler primeiro:</p>
+      <a class="reveal-button" href="0705.html">Carta - 07/05</a>
+      <a class="reveal-button" href="0706.html">Carta - 07/06</a>
+      <a class="reveal-button" href="0707.html">Carta - 07/07</a>
+    </div>
+  </div>
+</body>
+</html>
